@@ -1,0 +1,145 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+  <model name="IARC 3D Simulation arena">
+    <static>true</static>
+
+    <link name="field">
+      <pose>0 0 0.01 0 0 0</pose>
+      <collision name="collision">
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>50.0 50.0</size>
+          </plane>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>100</mu>
+              <mu2>50</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+
+
+
+      <visual name="base2">
+        <pose>0 -10 0.001 0 0 0</pose>
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20.0 0.08</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://iarc_arena/materials/scripts/</uri>
+            <uri>model://iarc_arena/materials/textures/</uri>
+            <name>IARC/FieldBorderGreen</name>
+          </script>
+	  <ambient>0 1 0 1</ambient>
+          <diffuse>0 1 0 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+
+      <visual name="base3">
+        <pose>10 0 0.001 0 0 0</pose>
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>0.08 20.0</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://iarc_arena/materials/scripts/</uri>
+            <uri>model://iarc_arena/materials/textures/</uri>
+            <name>IARC/FieldBorderWhite</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name="base4">
+        <pose>-10 0 0.001 0 0 0</pose>
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>0.08 20.0</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://iarc_arena/materials/scripts/</uri>
+            <uri>model://iarc_arena/materials/textures/</uri>
+            <name>IARC/FieldBorderWhite</name>
+          </script>
+        </material>
+
+      </visual>
+
+
+      <visual name="base5">
+        <pose>0 10 0.001 0 0 0</pose>
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20.0 0.08</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://iarc_arena/materials/scripts/</uri>
+            <uri>model://iarc_arena/materials/textures/</uri>
+            <name>IARC/FieldBorderRed</name>
+          </script>
+	  <ambient>1 0 0 1</ambient>
+          <diffuse>1 0 0 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+
+      <visual name="carpet">
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>30.0 30.0</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://iarc_arena/materials/scripts/</uri>
+            <uri>model://iarc_arena/materials/textures/</uri>
+            <name>IARC/Ground</name>
+          </script>
+        </material>
+      </visual>
+      <visual name="base6">
+        <pose>0 0 0.001 0 0 0</pose>
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20.0 0.08</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://iarc_arena/materials/scripts/</uri>
+            <uri>model://iarc_arena/materials/textures/</uri>
+            <name>IARC/FieldBorderWhite</name>
+          </script>
+        </material>
+
+      </visual>
+    </link>
+  </model>
+</sdf>
